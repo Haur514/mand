@@ -12,7 +12,7 @@ else:
 
 with open('foo/bar.txt','wt') as fp:
     fp.write('hogehoge')
-    
+    fp.close()
 repo = git.Repo()
 repo.git.commit(".","-m",'\"Commit Log\"')
 origin = repo.remote(name='origin')
