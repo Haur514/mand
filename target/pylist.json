@@ -1,0 +1,1 @@
+[{"package": "numpy", "version": "1.22.1", "deps": []}, {"package": "gitpython", "version": "3.1.27", "deps": [{"package": "smmap", "version": "5.0.0"}, {"package": "gitdb", "version": "4.0.9"}]}]

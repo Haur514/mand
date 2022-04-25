@@ -1,2 +1,2 @@
 numpy >= 1.2
-git >= 2.1.11
+GitPython >= 2.0.0
