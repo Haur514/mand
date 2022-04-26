@@ -1,4 +1,6 @@
 # action.yml
+env:
+  HACKMD_CLI_TOKEN: secrets.HACKMD_CLI_TOKEN
 name: 'Hello World'
 on: [push]
 jobs:
@@ -11,3 +13,4 @@ jobs:
       - run: npm install
       - run: npm install -g @hackmd/hackmd-cli
       - run: hackmd-cli -v
+      - run: hackmd-cli login
