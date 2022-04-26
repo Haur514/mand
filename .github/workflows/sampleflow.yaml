@@ -1,7 +1,6 @@
 # action.yml
 name: 'Hello World'
 on: [push]
-description: 'Greet someone and record the time'
 jobs:
   my_first_job:
     steps:
