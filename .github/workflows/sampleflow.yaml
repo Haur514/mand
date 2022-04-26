@@ -4,9 +4,11 @@ on: [push]
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '14'
-    - run: npm install
-    - name: InstallHackMdCli
-    - run: npm install -g @hackmd/hackmd-cli
+    steps:
+      - name: install
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install
+      - name: InstallHackMdCli
+      - run: npm install -g @hackmd/hackmd-cli
