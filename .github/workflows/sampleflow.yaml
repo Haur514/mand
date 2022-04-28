@@ -19,3 +19,4 @@ jobs:
           branch: minutes-for-pull-request
           base: minutes
           delete-branch: true
+          
