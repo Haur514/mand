@@ -1,16 +1,12 @@
 # action.yml
 name: 'Hello World'
-on: [push]
+on: [workflow_dispatch]
+
 jobs:
   build:
     name: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 10.x
-          cache: npm
-      - run: npm install
       - name: Run sh
-        run: ./.github/test.sh
+        run: ./.github/test.sh >| README.md
