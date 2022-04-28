@@ -11,4 +11,4 @@ jobs:
       - name: Run sh
         run: |
           ./.github/test.sh >| README.md
-          echo README.md
+          cat README.md
