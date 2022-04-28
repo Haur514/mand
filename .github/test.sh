@@ -2,6 +2,8 @@
 export today=`date "+%Y%m%d"`
 password="2NQNWJFDQQKO60LPVWYFSCYNVG2LY4L6M2Z7RW6X9TEGSDO9Z5"
 git clone -b minutes git@github.com:Haur514/mand.git
+mkdir ~/.hackmd
+touch ~/.hackmd/config.json
 echo "{" >~/.hackmd/config.json
 echo "  \"accessToken\": \"${password}\"" >>~/.hackmd/config.json
 echo "}" >>~/.hackmd/config.json
