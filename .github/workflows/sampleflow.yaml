@@ -9,4 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run sh
-        run: ./.github/test.sh >| README.md
+        run: |
+          ./.github/test.sh >| README.md
+          echo README.md
