@@ -1,4 +1,6 @@
 # action.yml
+env:
+  HACKMD_CLI_TOKEN: secrets.HACKMD_CLI_TOKEN
 name: 'Hello World'
 on: [workflow_dispatch]
 
