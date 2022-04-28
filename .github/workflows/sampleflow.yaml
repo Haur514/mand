@@ -17,3 +17,4 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           cimmit-message: 週1のコミット
+          branch: minutes
