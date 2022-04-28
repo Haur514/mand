@@ -2,15 +2,21 @@
 env:
   HACKMD_CLI_TOKEN: secrets.HACKMD_CLI_TOKEN
 name: 'Hello World'
-on: [push]
+on: [workflow_dispatch]
+
 jobs:
-  my_first_job:
+  build:
+    name: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - name: Run sh
+        run: |
+          ./.github/test.sh >| README.md
+          cat README.md
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
         with:
-          node-version: '14'
-      - run: npm install
-      - run: npm install -g @hackmd/hackmd-cli
-      - run: hackmd-cli -v
-      - run: hackmd-cli login
+          token: ${{secrets.GITHUB_TOKEN}}
+          cimmit-message: 週1のコミット
+          branch: minutes
