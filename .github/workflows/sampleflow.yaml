@@ -12,3 +12,4 @@ jobs:
         run: |
           ./.github/test.sh >| README.md
           cat README.md
+          hub pull-request -m "プルリク送ってみたいだけ"
