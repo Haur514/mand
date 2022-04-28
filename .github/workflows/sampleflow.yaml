@@ -15,8 +15,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          cimmit-message: 週1のコミット
+          commit-message: 週1のコミット
           branch: minutes-for-pull-request
           base: minutes
           delete-branch: true
-          
